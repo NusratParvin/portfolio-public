@@ -6,7 +6,7 @@ export default function LandingPage() {
   return (
     <div
       id="home"
-      className="relative flex md:h-screen  w-full md:flex-col flex-row items-center justify-center overflow-hidden rounded-none   bg-black md:shadow-xl  "
+      className="relative flex  md:h-[90vh] h-[80vh]  w-full md:flex-col flex-row items-center justify-center overflow-hidden rounded-none   bg-black md:shadow-xl  "
     >
       <Intro />
 

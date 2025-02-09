@@ -122,14 +122,14 @@
 
 // export default ContactForm;
 
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import gsap from "gsap";
 import emailjs from "emailjs-com";
 import { useForm } from "react-hook-form";
 
 const ContactForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const formRef = useRef(null);
+  // const formRef = useRef(null);
   const {
     register,
     handleSubmit,
@@ -147,6 +147,7 @@ const ContactForm = () => {
     });
   }, []);
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const onSubmit = (data: any) => {
     const formData = {
       from_name: data.name,
