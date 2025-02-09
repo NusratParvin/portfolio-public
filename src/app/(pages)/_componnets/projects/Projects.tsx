@@ -41,6 +41,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Projects() {
   const [projectsData, setProjectsData] = useState([]);
+  const [visibleCount, setVisibleCount] = useState(2);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -71,13 +72,19 @@ export default function Projects() {
     });
   }, []);
 
+  const loadMoreProjects = () => {
+    setVisibleCount(projectsData.length);
+  };
+
   return (
     <div
       id="projects"
-      className="min-h-screen md:w-11/12 w-full mx-auto text-white p-8 my-20"
+      className="min-h-screen md:w-11/12 w-full mx-auto text-white p-8 my-10"
     >
-      <div className="mx-auto w-full max-w-lg  relative flex flex-col items-center justify-center text-center overflow-visible mb-20">
-        <h3 className="text-5xl font-semibold pb-4">Selected Works</h3>
+      <div className="mx-auto w-full max-w-lg  relative flex flex-col items-center justify-center text-center overflow-visible lg:mb-12 mb-6">
+        <h3 className="lg:text-5xl md:text-3xl text-xl font-semibold pb-4">
+          Selected Works
+        </h3>
         <div className="w-full relative flex flex-col items-center justify-center">
           <div className="absolute inset-x-auto top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-full blur-sm"></div>
           <div className="absolute inset-x-auto top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-full"></div>
@@ -85,18 +92,28 @@ export default function Projects() {
           <div className="absolute inset-x-auto top-0 bg-gradient-to-r from-transparent via-base to-transparent h-px w-1/2"></div>
           <div className="absolute inset-0 w-full h-full bg-background [mask-image:radial-gradient(50%_200px_at_top,transparent_20%,white)]"></div>
         </div>
-        <p className="mt-6 text-[1rem]">
+        <p className="lg:mt-6 mt-4 text-[1rem]">
           Here I present some of my personal projects
         </p>
 
         <span className="absolute -z-[1] backdrop-blur-sm inset-0 w-full h-full flex before:content-[''] before:h-3/4 before:w-full before:bg-gradient-to-r before:from-black before:to-purple-600 before:blur-[90px] after:content-[''] after:h-1/2 after:w-full after:bg-gradient-to-br after:from-cyan-400 after:to-sky-300 after:blur-[90px]"></span>
       </div>
 
-      <div className="flex flex-col gap-12">
-        {projectsData?.map((project: Project, index: number) => (
-          <ProjectCard key={project?._id} index={index} project={project} />
-        ))}
+      <div className="flex flex-col lg:gap-12 gap-12">
+        {projectsData
+          .slice(0, visibleCount)
+          ?.map((project: Project, index: number) => (
+            <ProjectCard key={project?._id} index={index} project={project} />
+          ))}
       </div>
+      {visibleCount < projectsData.length && (
+        <div
+          onClick={loadMoreProjects}
+          className="text-[0.8rem] uppercase tracking-wider px-4  py-1 border-base/80 bg-base/40 w-40 mx-auto text-center mt-6"
+        >
+          Load More
+        </div>
+      )}
     </div>
   );
 }

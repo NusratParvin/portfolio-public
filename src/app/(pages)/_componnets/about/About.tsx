@@ -8,42 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 import DOMPurify from "dompurify";
 import { Education, PreviousWork, Tech } from "../../../../../types";
 import Image from "next/image";
-
-// const techStack = [
-//   // Add more technologies as needed
-//   {
-//     name: "JavaScript",
-//     logo: "/assets/1/png",
-//   },
-//   {
-//     name: "React",
-//     logo: "/assets/1/png",
-//   },
-//   {
-//     name: "Node.js",
-//     logo: "/assets/1/png",
-//   },
-//   {
-//     name: "JavaScript",
-//     logo: "/assets/1/png",
-//   },
-//   {
-//     name: "React",
-//     logo: "/public/assets/1/png",
-//   },
-//   {
-//     name: "Node.js",
-//     logo: "/assets/1/png",
-//   },
-// ];
-
-// const softSkills = [
-//   "Persistant",
-//   "Collaborative",
-//   "Communicative",
-//   "Organized",
-//   "Adaptable",
-// ];
+import VideoPlayer from "../landing/Cloud";
 
 export default function About() {
   // States for the data
@@ -89,13 +54,13 @@ export default function About() {
       duration: 1,
     });
   }, []);
-  // console.log(object);
+
   return (
     <div
       id="about"
       className="bg-gradient-to-br from-base/30 to-base/10 text-white p-0 w-full min-h-screen rounded-none shadow-xl relative "
     >
-      <div className="flex flex-col items-center justify-center text-center lg:w-11/12 md:w-[95%] w-full mx-auto  pb-12   ">
+      <div className="flex flex-col items-center justify-center text-center lg:w-11/12 md:w-[95%] w-full mx-auto  pb-6   ">
         <h1 className="lg:text-6xl md:text-4xl text-3xl font-semibold mb-3 leading-tight pt-12">
           Lets get{" "}
           <span className="text-[#5A4FCF] lg:text-6xl md:text-4xl text-3xl font-bold">
@@ -115,9 +80,9 @@ export default function About() {
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row  items-start justify-center text-[0.9rem] w-full mx-auto lg:mt-8 mt-2  xl:gap-4 gap-2 ">
+        <div className="flex flex-col lg:flex-row  items-start justify-center text-[0.9rem] w-full mx-auto lg:mt-8 md:mt-4 mt-2  xl:gap-4 gap-2 ">
           {/* Education Section */}
-          <ShineBorder className="flex flex-col items-center justify-center lg:h-48 h-32 w-11/12 md:w-[1/6] xl:w-80 overflow-hidden bg-transparent md:shadow-xl p-0 mx-auto">
+          <ShineBorder className="flex flex-col items-center justify-center lg:h-48 h-32 w-11/12 md:w-[1/6] xl:w-96 overflow-hidden bg-transparent md:shadow-xl p-0 mx-auto">
             <aside className="bg-black/30 text-white py-2 px-4 rounded-none h-full w-full text-left font-mono">
               <div className="flex justify-between items-center border-b border-gray-700">
                 <div className="flex space-x-2 text-red-500">my-education</div>
@@ -140,7 +105,7 @@ export default function About() {
           </ShineBorder>
 
           {/* Work Status Section */}
-          <ShineBorder className="flex flex-col items-center justify-center h-auto w-11/12 md:w-[2/6] xl:w-[450px] overflow-hidden bg-transparent md:shadow-xl p-0 mx-auto">
+          <ShineBorder className="flex flex-col items-center justify-center h-auto w-11/12 md:w-[2/6] xl:w-[520px] overflow-hidden bg-transparent md:shadow-xl p-0 mx-auto">
             <aside className="bg-black/30 text-white py-2 px-4 rounded-none h-full w-full text-left pb-12 font-mono">
               <div className="flex justify-between items-center border-b border-gray-700">
                 <div className="flex space-x-2 text-red-500">work-status</div>
@@ -205,37 +170,68 @@ export default function About() {
         </div>
 
         {/* //expertise */}
-        <div className="grid grid-cols-2 items-start justify-start my-10">
-          <div className="">
-            <div className="flex flex-col items-start  justify-start lg:w-11/12 md:w-[95%] mx-auto  gap-0 md:p-0 px-4">
-              <h1 className="md:text-4xl text-3xl font-medium py-4 text-left col-span-1 border-b border-white/50 w-full ">
-                Techs I use,
-              </h1>
-              <div className=" w-full md:col-span-3 text-lg text-left  pb-4 ">
-                <div className="flex justify-start flex-wrap items-start gap-2 px-4 py-1 ps-0 ">
-                  {techStack?.map((tech: Tech, index) => (
-                    <div
-                      key={index}
-                      className="flex flex-row items-center py-2 px-6 rounded-full shadow-2xl bg-black/20"
-                    >
-                      <Image
-                        src={tech?.icon}
-                        alt={tech?.name}
-                        width={20}
-                        height={20}
-                        // unoptimized={true}
-                      />
-                      <span className="ml-2 text-[1rem] font-medium  text-green-500">
-                        {tech?.name}
-                      </span>
-                    </div>
-                  ))}
+        <div className="md:pt-20 pt-10">
+          <h1 className="lg:text-5xl md:text-3xl text-2xl font-semibold mb-3 leading-tight">
+            <span className="text-[#5A4FCF]  font-bold">Visualizing</span>
+            <span> My Skills</span>
+          </h1>
+          <div className="grid md:grid-cols-2 grid-cols-1 items-start justify-start md:my-6 xl:my-10 my-0">
+            <div className="col-span-2 lg:col-span-1">
+              <div className="flex flex-col items-start  justify-start lg:w-11/12 md:w-[95%] mx-auto  gap-0 md:p-0 px-4">
+                <h1 className="md:text-2xl text-lg xl:text-3xl font-medium md:py-4 py-2 text-left col-span-1 border-b border-white/50 w-full ">
+                  Technologies I use,
+                </h1>
+                <div className=" w-full md:col-span-3 text-lg text-left  py-4 ">
+                  <div className="flex justify-start flex-wrap items-start gap-2 px-4 py-1 ps-0 ">
+                    {techStack?.map((tech: Tech, index) => (
+                      // <div
+                      //   key={index}
+                      //   className="flex flex-row items-center py-2 px-6 rounded-full shadow-2xl bg-black/20"
+                      // >
+                      //   <Image
+                      //     src={tech?.icon}
+                      //     alt={tech?.name}
+                      //     width={20}
+                      //     height={20}
+                      //     // unoptimized={true}
+                      //   />
+                      //   <span className="ml-2 lg:ml-4 text-[1rem] lg:text-2xl font-medium  text-green-500">
+                      //     {tech?.name}
+                      //   </span>
+                      // </div>
+                      <div
+                        key={index}
+                        className="flex flex-row items-center py-2 px-6 rounded-full shadow-2xl bg-black/20"
+                      >
+                        <div className="relative w-6 h-6 md:w-8 md:h-8 lg:w-7 lg:h-7 xl:w-10 xl:h-10">
+                          {" "}
+                          {/* Adjust sizes as needed */}
+                          <Image
+                            src={tech?.icon}
+                            alt={tech?.name}
+                            layout="fill"
+                            objectFit="contain"
+                          />
+                        </div>
+                        <span className="ml-2 xl:ml-4 text-sm md:text-lg xl:text-xl font-medium text-green-500">
+                          {tech?.name}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div>vdo</div>
+            <div className="col-span-2 lg:col-span-1 h-full">
+              <div className="flex flex-col items-start  justify-center lg:w-11/12 md:w-[95%] mx-auto  gap-0 md:p-0 px-4">
+                <h1 className="md:text-2xl text-lg xl:text-3xl font-medium md:py-4 py-2 text-center col-span-1   w-full ">
+                  Why would you hire me?
+                </h1>
+                <VideoPlayer />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

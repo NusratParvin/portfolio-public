@@ -4,7 +4,7 @@ const VideoPlayer = () => {
   return (
     <div className="video-player bg-black/10 opacity-70">
       <video autoPlay loop muted className="max-w-full h-auto">
-        <source src="/assets/3.mp4" type="video/mp4" />
+        <source src="/assets/contact/2.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>

@@ -174,20 +174,23 @@ const ProjectCard = ({ index, project }: ProjectCardProps) => {
   return (
     <>
       <div
-        className="shadow-md grid grid-col-1 md:grid-cols-3 items-center border-b border-base/30 gap-6 p-0 md:p-6 md:m-4 m-0 cursor-pointer group"
+        className="shadow-md grid grid-col-1 lg:grid-cols-3 items-center border-b border-base/30 gap-3 p-0 lg:p-6 lg:m-4 m-0 cursor-pointer group"
         onClick={() => setIsModalOpen(true)}
       >
         <div>
           <div className="flex gap-6 items-baseline">
-            <p className="text-2xl mb-4 text-gray-300">
-              0<span className="text-[1.7rem]">{`${index + 1}.`}</span>
+            <p className="lg:text-2xl text-lg mb-4 text-gray-300">
+              0
+              <span className="lg:text-[1.7rem] text-[1.4rem]">{`${
+                index + 1
+              }.`}</span>
             </p>
-            <h2 className="text-4xl font-semibold hover:underline text-white/90">
+            <h2 className="lg:text-4xl md:text-2xl text-xl font-semibold hover:underline text-white/90">
               {project?.name}
             </h2>
           </div>
 
-          <div className="flex justify-start gap-8 items-center mt-8">
+          <div className="flex justify-start gap-8 items-center lg:mt-8 mt-2">
             <Link
               href={project?.liveSite}
               target="_blank"
@@ -195,7 +198,8 @@ const ProjectCard = ({ index, project }: ProjectCardProps) => {
               className="text-base hover:underline"
               onClick={(e) => e.stopPropagation()}
             >
-              <ExternalLink className="inline mr-1 w-4 h-4" /> Live
+              <ExternalLink className="inline mr-1 md:w-4 md:h-4 h-3 w-3" />{" "}
+              <span className="lg:text-lg text-sm">Live</span>
             </Link>
             <Link
               href={project?.githubClient}
@@ -204,7 +208,8 @@ const ProjectCard = ({ index, project }: ProjectCardProps) => {
               className="text-base hover:underline"
               onClick={(e) => e.stopPropagation()}
             >
-              <Github className="inline mr-1 w-4 h-4" /> Client
+              <Github className="inline mr-1 md:w-4 md:h-4 h-3 w-3" />
+              <span className="lg:text-lg text-sm">Client</span>
             </Link>
             <Link
               href={project?.githubBackend}
@@ -213,7 +218,8 @@ const ProjectCard = ({ index, project }: ProjectCardProps) => {
               className="text-base hover:underline"
               onClick={(e) => e.stopPropagation()}
             >
-              <Github className="inline mr-1 w-4 h-4" /> Backend
+              <Github className="inline mr-1 md:w-4 md:h-4 h-3 w-3" />{" "}
+              <span className="lg:text-lg text-sm">Backend</span>
             </Link>
           </div>
         </div>
@@ -222,7 +228,7 @@ const ProjectCard = ({ index, project }: ProjectCardProps) => {
           <p className="text-gray-400 text-[1rem] leading-snug">
             {project?.summary}
           </p>
-          <div className="flex flex-wrap gap-1.5 mt-12">
+          <div className="flex flex-wrap gap-1.5 lg:mt-12 mt-4">
             {project?.techs?.map((tech, index) => (
               <span
                 key={index}
