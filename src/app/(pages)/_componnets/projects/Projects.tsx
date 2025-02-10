@@ -41,7 +41,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Projects() {
   const [projectsData, setProjectsData] = useState([]);
-  const [visibleCount, setVisibleCount] = useState(2);
+  const [visibleCount, setVisibleCount] = useState(3);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -53,7 +53,7 @@ export default function Projects() {
         console.error("Error fetching projects data:", error);
       }
     };
-    console.log(projectsData);
+    // console.log(projectsData);
 
     fetchData();
   }, []);
