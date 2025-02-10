@@ -103,14 +103,14 @@ export default function ProjectModal({
         <ScrollArea className="h-full  mx-auto">
           <div ref={contentRef} className="relative p-0 py-16">
             <div className="mx-auto   space-y-8">
-              <div className="space-y-6   md:w-4/5 w-11/12 mx-auto">
-                <h1 className="text-6xl font-semibold text-white mb-12">
+              <div className="space-y-6   lg:w-4/5 w-11/12 mx-auto">
+                <h1 className="lg:text-6xl md:text-4xl text-2xl font-semibold text-white lg:mb-12 mb-6">
                   {project.name}
                 </h1>
 
                 <div className="grid md:grid-cols-3 grid-cols-1 items-start justify-start gap-12 ">
                   <div className="col-span-2">
-                    <h2 className=" uppercase text-xl pb-2  font-thin w-full  mb-6 ">
+                    <h2 className=" uppercase text-xl pb-2  font-thin w-full  lg:mb-6 mb-2 ">
                       DESCRIPTION
                     </h2>
                     <div

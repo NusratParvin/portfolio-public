@@ -109,7 +109,7 @@ export default function Projects() {
       {visibleCount < projectsData.length && (
         <div
           onClick={loadMoreProjects}
-          className="text-[0.8rem] uppercase tracking-wider px-4  py-1 border-base/80 bg-base/40 w-40 mx-auto text-center mt-6"
+          className="text-[0.8rem] uppercase tracking-wider px-4  py-1 border-base/80 bg-base/40 w-40 mx-auto text-center mt-6 cursor-pointer"
         >
           Load More
         </div>
