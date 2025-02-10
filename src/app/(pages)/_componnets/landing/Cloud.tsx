@@ -1,10 +1,8 @@
-import React from "react";
-
 const VideoPlayer = () => {
   return (
-    <div className="video-player bg-black/10 opacity-70">
-      <video autoPlay loop muted className="max-w-full h-auto">
-        <source src="/assets/contact/2.mp4" type="video/mp4" />
+    <div className="flex justify-center items-center bg-black/10 opacity-70 w-full h-full">
+      <video autoPlay loop muted controls className="h-80 max-w-full">
+        <source src="/assets/about/about-full.mov" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>

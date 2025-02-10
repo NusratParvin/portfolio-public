@@ -60,7 +60,7 @@ export default function About() {
       id="about"
       className="bg-gradient-to-br from-base/30 to-base/10 text-white p-0 w-full min-h-screen rounded-none shadow-xl relative "
     >
-      <div className="flex flex-col items-center justify-center text-center lg:w-11/12 md:w-[95%] w-full mx-auto  pb-6   ">
+      <div className="flex flex-col items-center justify-center text-center lg:w-10/12 md:w-[95%] w-full mx-auto  pb-6   ">
         <h1 className="lg:text-6xl md:text-4xl text-3xl font-semibold mb-3 leading-tight pt-12">
           Lets get{" "}
           <span className="text-[#5A4FCF] lg:text-6xl md:text-4xl text-3xl font-bold">
@@ -68,7 +68,7 @@ export default function About() {
             introduced !
           </span>
         </h1>
-        <div className="grid lg:grid-cols-4 grid-cols-1 lg:mt-20 mt-4 lg:gap-6 gap-1 justify-start items-center  text-left lg:w-11/12 md:w-[95%] w-full mx-auto md:p-0 px-4">
+        <div className="grid lg:grid-cols-4 grid-cols-1 lg:mt-20 mt-4 lg:gap-6 gap-1 justify-start items-center  text-left  md:w-[95%] w-full mx-auto md:p-0 px-4">
           <h1 className="lg:text-5xl md:text-2xl text-lg text-[1rem] font-medium md:py-4 py-1 col-span-1  ">
             I am,
           </h1>
@@ -175,10 +175,10 @@ export default function About() {
             <span className="text-[#5A4FCF]  font-bold">Visualizing</span>
             <span> My Skills</span>
           </h1>
-          <div className="grid md:grid-cols-2 grid-cols-1 items-start justify-start md:my-6 xl:my-10 my-0">
-            <div className="col-span-2 lg:col-span-1">
+          <div className="grid md:grid-cols-3 grid-cols-1 items-start justify-start md:my-6 xl:my-10 my-0">
+            <div className="col-span-3 lg:col-span-2">
               <div className="flex flex-col items-start  justify-start lg:w-11/12 md:w-[95%] mx-auto  gap-0 md:p-0 px-4">
-                <h1 className="md:text-2xl text-lg xl:text-3xl font-medium md:py-4 py-2 text-left col-span-1 border-b border-white/50 w-full ">
+                <h1 className="md:text-xl text-lg xl:text-2xl font-medium md:py-4 py-2 text-left col-span-1 border-b border-white/50 w-full ">
                   Technologies I use,
                 </h1>
                 <div className=" w-full md:col-span-3 text-lg text-left  py-4 ">
@@ -223,9 +223,9 @@ export default function About() {
               </div>
             </div>
 
-            <div className="col-span-2 lg:col-span-1 h-full">
-              <div className="flex flex-col items-start  justify-center lg:w-11/12 md:w-[95%] mx-auto  gap-0 md:p-0 px-4">
-                <h1 className="md:text-2xl text-lg xl:text-3xl font-medium md:py-4 py-2 text-center col-span-1   w-full ">
+            <div className="col-span-3 lg:col-span-1 h-full">
+              <div className="flex flex-col items-start justify-center lg:w-10/12 md:w-[95%] mx-auto  gap-0 md:p-0 px-4 ">
+                <h1 className="md:text-xl text-lg xl:text-2xl font-medium md:py-4 py-2 text-center col-span-1 w-full ">
                   Why would you hire me?
                 </h1>
                 <VideoPlayer />
