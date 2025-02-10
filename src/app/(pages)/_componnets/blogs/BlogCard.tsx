@@ -33,16 +33,6 @@ export default function BlogCard({ post }: BlogCardProps) {
           </time>
         </div>
 
-        {/* <div className="hidden sm:block sm:w-32 sm:h-full">
-          <Image
-            alt={name}
-            src={image}
-            width={128}
-            height={128}
-            className="object-cover h-full w-full"
-          />
-        </div> */}
-
         <div className="flex flex-1 flex-col justify-between">
           <div className="border-s border-gray-900/10 p-4 sm:border-l-transparent sm:px-4 py-0">
             <h3 className="font-semibold uppercase text-lg">{name}</h3>
@@ -66,10 +56,10 @@ export default function BlogCard({ post }: BlogCardProps) {
             </div>
           </div>
 
-          <div className="sm:flex sm:items-end sm:justify-end">
+          <div className="sm:flex sm:items-end sm:justify-end mt-10">
             <button
               onClick={() => setIsModalOpen(true)}
-              className="block bg-indigo-500 px-5 py-2 text-center text-sm font-bold uppercase text-gray-900 transition hover:bg-indigo-600"
+              className="block bg-indigo-500 px-12 py-2 text-center text-sm font-bold uppercase text-white/90 tracking-widest transition hover:bg-indigo-600"
             >
               Read Blog
             </button>

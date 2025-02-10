@@ -79,7 +79,7 @@ export default function Projects() {
   return (
     <div
       id="projects"
-      className="min-h-screen md:w-11/12 w-full mx-auto text-white p-8 my-10"
+      className="min-h-screen md:w-11/12 lg:w-10/12 w-full mx-auto text-white p-8 my-10"
     >
       <div className="mx-auto w-full max-w-lg  relative flex flex-col items-center justify-center text-center overflow-visible lg:mb-12 mb-6">
         <h3 className="lg:text-5xl md:text-3xl text-xl font-semibold pb-4">

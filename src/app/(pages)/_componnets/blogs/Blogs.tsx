@@ -23,7 +23,10 @@ const Blogs = () => {
   }, []);
 
   return (
-    <div id="blog" className="mx-auto md:w-11/12 w-full p-5 mb-16 min-h-[80vh]">
+    <div
+      id="blog"
+      className="mx-auto md:w-11/12 lg:w-10/12 w-full p-5 lg:mb-10 mb-6 min-h-[80vh]"
+    >
       <h1 className="mb-10 text-center text-4xl font-semibold ">
         Latest Blog Posts
       </h1>
